@@ -1,0 +1,87 @@
+@import 'config/vars.less';
+@import 'config/reset.less';
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@400;700&display=swap');
+
+@bpMobile: ~'screen and (max-width: 1023px)';
+
+.w-100 {
+    width: 100%;
+}
+
+.b-center {
+    margin: 0 auto;
+}
+
+body {
+    background-color: #colors[bg_body];
+    color: #colors[base_white];
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    font-family: #fonts[title];
+    color: #colors[base_white];
+    font-size: 3rem;
+}
+
+main {
+    max-width: 960px;
+    .w-100();
+    .b-center();
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+
+    @media @bpMobile {
+        padding-top: 80px;
+        width: 90%;
+    }
+}
+
+label {
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 60px;
+}
+
+input {
+    display: block;
+    margin: 16px auto 0;
+    font-size: 2rem;
+    max-width: 180px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    color: #colors[base_white];
+    border-bottom: solid 3px #colors[base_white];
+}
+
+button {
+    padding: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 16px;
+    border-radius: 8px;
+    background-color: #colors[bg_button];
+    color: #colors[base_button];
+    font-family: #fonts[base];
+}
+
+.resultado {
+    .w-100();
+    padding: 16px;
+    margin-top: 120px;
+    border: dashed 8px #colors[base_white];
+    display: none;
+
+    span {
+        font-weight: bold;
+        font-size: 3rem;
+        display: block;
+    }
+}
